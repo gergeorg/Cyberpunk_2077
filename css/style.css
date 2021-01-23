@@ -39,9 +39,12 @@
   --black-color: #000;
   --yellow-color: #f8f200;
   --blue-color: #52bedc;
+  --text-color: #777;
 }
 
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -102,6 +105,13 @@ ul {
   font-weight: 400;
   font-size: 62px;
   line-height: 63px;
+}
+
+.black-btn {
+  padding: 19px 50px;
+  font-weight: 700;
+  background-color: var(--black-color);
+  color: var(--yellow-color);
 }
 
 
@@ -238,12 +248,12 @@ ul {
 }
 
 .hero-info__btn {
-  padding: 19px 50px;
-  font-weight: 700;
+  /* padding: 19px 50px;
+  font-weight: 700; */
   font-size: 24px;
   line-height: 40px;
-  color: var(--yellow-color);
-  background-color: var(--black-color);
+  /* color: var(--yellow-color); */
+  /* background-color: var(--black-color); */
 }
 
 
@@ -305,7 +315,7 @@ ul {
 .game {
   position: relative;
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 135px;
   background-color: var(--black-color);
 }
 
@@ -320,37 +330,316 @@ ul {
   background-repeat: repeat-x;
 }
 
+.game::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-image: url(../img/game_bg-bottom.png);
+  background-repeat: repeat-x;
+  /* transform: rotate(180deg); */
+}
+
 .game__title {
   color: var(--white-color);
   background-image: url(../img/action.svg);
   background-position: left center;
   background-repeat: no-repeat;
-  padding: 50px 0 10px 163px;
+  padding: 58px 0 10px 163px;
 }
 
 .game__descr {
   margin-top: 27px;
+  margin-bottom: 52px;
   max-width: 75%;
   margin-bottom: 50px;
   color: var(--white-color);
-
 }
 
 .game__content {
   display: flex;
+  justify-content: space-between;
 }
 
 .game__form {
+  width: 36%;
+  padding-top: 63px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .form__input {
+  padding: 11px;
+  padding-left: 3px;
+  margin-bottom: 26px;
+  display: block;
+  width: 100%;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #777777;
+  border-bottom: 1px solid var(--text-color);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--white-color);
 }
 
+.form__input:focus {
+  outline: 1px solid var(--yellow-color);
+}
+
+.form__input:nth-child(2) {
+  margin-bottom: 36px;
+}
+
+.form__label {
+  padding: 39px;
+  margin-bottom: 33px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white-color);
+  border: 1px dashed var(--text-color);
+}
+
+.form-label__file {
+  position: absolute;
+  opacity: 0;
+}
+
+.form__label--text {
+  display: block;
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--white-color);
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.form__label--text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.form-label__file:focus + .form__label--text::after {
+  opacity: 1;
+  outline: 1px solid var(--yellow-color);
+}
+
+.form__label--extension {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.form__btn {
+  padding: 19px 50px;
+  margin-bottom: 13px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--black-color);
+  background-color: var(--yellow-color);
+}
+
+.checkbox {
+  position: relative;
+
+}
+
+.checkbox__input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox__text {
+  padding-left: 24px;
+  position: relative;
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--white-color);
+}
+
+.checkbox__text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--text-color);
+}
+
+.checkbox__input:checked + .checkbox__text::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 4px;
+  height: 7px;
+  border-right: 1px solid var(--yellow-color);
+  border-bottom: 1px solid var(--yellow-color);
+  transform: rotate(45deg);
+}
+
+.checkbox__input:focus + .checkbox__text::before {
+  border: 1px solid var(--yellow-color);
+}
+
+
+
+
+
+
+
+
+
+.hp{
+  padding-top: 75px;
+  padding-bottom: 65px;
+  background-color: var(--yellow-color);
+}
+
+.hp__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hp__left {
+  width: calc(50% - 16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hp__right {
+  width: calc(50% - 16px);
+}
+
+.hp__title {
+  margin-bottom: 25px;
+}
+
+.hp__descr {
+  margin-bottom: 20px;
+  color: var(--black-color);
+}
+
+.hp__item {
+  padding-left: 42px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+}
+
+.hp__list {
+  margin-bottom: 45px;
+}
+
+.hp__item:not(:last-child) {
+  margin-bottom: 26px;
+}
+
+.hp__logos {
+  display: flex;
+  align-items: center;
+}
+
+.logos-separator {
+  margin: 0 30px;
+  display: inline-block;
+  background-image: url(../img/x.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 90px;
+  height: 20px;
+}
+
+.hp__img {
+  margin-bottom: 43px;
+}
+
+
+
+
+
+
+
+
+.buy {
+  position: relative;
+  padding: 70px 0;
+  background-color: var(--black-color);
+}
+
+.buy__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
+}
+
+.buy__container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buy__content {
+  width: 50%;
+  padding-left: 32px;
+}
+
+.buy__title {
+  color: var(--white-color);
+}
+
+.buy__subtitle {
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--blue-color);
+}
+
+.buy__item {
+  padding-left: 42px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+  color: var(--white-color);
+}
+
+.buy__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.platforms__link {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.platforms__link--pc {
+  background-image: url(../img/PC.svg);
+}
+
+.platforms__link--xbox {
+  background-image: url(../img/xbox-one-3_logo.svg);
+}
+
+.platforms__link--ps4 {
+  background-image: url(../img/Playstation_logo.svg);
+
+}
+
+.platforms__link--stadia {
+  background-image: url(../img/stadia_logo.svg);
+}
 
 
 

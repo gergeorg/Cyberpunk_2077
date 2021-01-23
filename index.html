@@ -42,7 +42,7 @@
       <div class="container hero__container">
         <div class="hero__info corner-block">
           <h2 class="hero-info__title">Доступно на всех платформах</h2>
-          <button class="btn-reset hero-info__btn">Узнать больше</button>
+          <button class="btn-reset hero-info__btn black-btn">Узнать больше</button>
         </div>
       </div>
     </section>
@@ -74,8 +74,8 @@
 
         <div class="game__content">
           <form action="https://postman-echo.com/post" method="POST" class="form game__form">
-            <input type="text" name="BIO" class="form__input">
-            <input type="email" name="email" class="form__input">
+            <input type="text" name="BIO" class="form__input" placeholder="Как тебя зовут?">
+            <input type="email" name="email" class="form__input" placeholder="Твой е-mail">
             <label class="form__label">
               <input type="file" name="screen" class="form-label__file">
               <span class="form__label--text">Прикрепить скриншот</span>
@@ -94,57 +94,61 @@
       </div>
     </section>
 
-    <section class="hp container">
-      <div class="hp__left">
-        <img src="img/monitor_hp.png" alt="Монитор HP">
-        <div class="hp__logos">
-          <a href="" class="hp__logo">
-            <img src="img/hp-logo.svg" alt="Логотип HP">
-          </a>
+    <section class="hp">
+      <div class="container hp__container">
+        <div class="hp__left">
+          <img class="hp__img" src="img/monitor_hp.png" alt="Монитор HP">
+          <div class="hp__logos">
+            <a href="#" class="hp__logo">
+              <img src="img/hp-logo.svg" alt="Логотип HP">
+            </a>
 
-          <span class="logos-separator"></span>
+            <span class="logos-separator"></span>
 
-          <a href="" class="hp__logo">
-            <img src="img/logo.svg" alt="логотип Cyberpunk">
-          </a>
+            <a href="#" class="hp__logo">
+              <img src="img/logo.svg" alt="логотип Cyberpunk">
+            </a>
+          </div>
         </div>
-      </div>
 
-      <div class="hp__right">
-        <h2 class="site-title hp__title">Полное погружение вместе с HP</h2>
-        <p class="hp__descr">Погрузись в&nbsp;современные экшен-игры с&nbsp;реалистичным изображением с&nbsp;помощью монитора с&nbsp;диагональю 23,8&nbsp;дюйма, созданном для отображения максимально насыщенных цветов. Успевай реагировать на&nbsp;любые события с&nbsp;временем отклика 1&nbsp;мс и&nbsp;частотой в&nbsp;144&nbsp;Гц!</p>
+        <div class="hp__right">
+          <h2 class="site-title hp__title">Полное погружение вместе с HP</h2>
+          <p class="hp__descr">Погрузись в&nbsp;современные экшен-игры с&nbsp;реалистичным изображением с&nbsp;помощью монитора с&nbsp;диагональю 23,8&nbsp;дюйма, созданном для отображения максимально насыщенных цветов. Успевай реагировать на&nbsp;любые события с&nbsp;временем отклика 1&nbsp;мс и&nbsp;частотой в&nbsp;144&nbsp;Гц!</p>
 
-        <ul class="hp__list">
-          <li class="hp__item" style="background-image: url('img/color_lens.svg');">Яркие насыщенные цвета</li>
-          <li class="hp__item" style="background-image: url('img/auto_awesome.svg');">Кристальная четкость изображения</li>
-          <li class="hp__item" style="background-image: url('img/auto_awesome_motion.svg');">Быстрые движения и плавный геймплей</li>
-        </ul>
+          <ul class="hp__list">
+            <li class="hp__item" style="background-image: url('img/color_lens.svg');">Яркие насыщенные цвета</li>
+            <li class="hp__item" style="background-image: url('img/auto_awesome.svg');">Кристальная четкость изображения</li>
+            <li class="hp__item" style="background-image: url('img/auto_awesome_motion.svg');">Быстрые движения и плавный геймплей</li>
+          </ul>
 
-        <button class="hp__btn btn-reset">Подрообнее</button>
+          <button class="hp__btn black-btn btn-reset">Подрообнее</button>
+        </div>
       </div>
     </section>
 
-    <section class="buy container">
+    <section class="buy">
       <picture>
-        <img src="img/cover-game.jpg" alt="Обложки игры Cyberpunk" class="buy__image">
+        <img class="buy__image" src="img/cover-game.jpg" alt="Обложки игры Cyberpunk">
       </picture>
 
-      <div class="buy__content">
-        <h2 class="site-title buy__title">Купить игру Cyberpunk 2077</h2>
-        <p class="buy__subtitle">В комплект входит:</p>
-        <ul class="buy__list">
-          <li class="buy__item" style="background-image: url('img/disk.svg');">Футляр с игровыми дисками</li>
-          <li class="buy__item" style="background-image: url('img/wysiwyg.svg');">Футляр с кодом для загрузки игры и дисками (pc)</li>
-          <li class="buy__item" style="background-image: url('img//collections.svg');">Справочник с информацией об игровом мире</li>
-        </ul>
+      <div class="buy__container container">
+        <div class="buy__content">
+          <h2 class="site-title buy__title">Купить игру Cyberpunk 2077</h2>
+          <p class="buy__subtitle">В комплект входит:</p>
+          <ul class="buy__list">
+            <li class="buy__item" style="background-image: url('img/disk.svg');">Футляр с игровыми дисками</li>
+            <li class="buy__item" style="background-image: url('img/wysiwyg.svg');">Футляр с кодом для загрузки игры и дисками (pc)</li>
+            <li class="buy__item" style="background-image: url('img/collections.svg');">Справочник с информацией об игровом мире</li>
+          </ul>
 
-        <p class="buy__subtitle">Выберите платформу:</p>
-        <ul class="platforms-list">
-          <li class="platforms-list__item"><a href="#" class="platforms__link platforms__link--pc" aria-label="купить игру для PC"></a></li>
-          <li class="platforms-list__item"><a href="#" class="platforms__link platforms__link--stadia" aria-label="купить игру для stadia"></a></li>
-          <li class="platforms-list__item"><a href="#" class="platforms__link platforms__link--xbox" aria-label="купить игру для x-box"></a></li>
-          <li class="platforms-list__item"><a href="#" class="platforms__link platforms__link--ps4" aria-label="купить игру для ps4"></a></li>
-        </ul>
+          <p class="buy__subtitle">Выберите платформу:</p>
+          <ul class="platforms-list">
+            <li class="platforms-list__item"><a href="#" class="platforms__link platforms__link--pc" aria-label="купить игру для PC"></a></li>
+            <li class="platforms-list__item"><a href="#" class="platforms__link platforms__link--stadia" aria-label="купить игру для stadia"></a></li>
+            <li class="platforms-list__item"><a href="#" class="platforms__link platforms__link--xbox" aria-label="купить игру для x-box"></a></li>
+            <li class="platforms-list__item"><a href="#" class="platforms__link platforms__link--ps4" aria-label="купить игру для ps4"></a></li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
