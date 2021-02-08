@@ -76,8 +76,8 @@ ul {
 }
 
 .container {
-  max-width: 1310px;
-  padding: 0 15px;
+  max-width: 1352px;
+  padding: 0 36px;
   margin: 0 auto;
 }
 
@@ -236,7 +236,8 @@ ul {
 
 .corner-block {
   overflow: hidden;
-  clip-path: polygon(8% 0, 100% 0, 100% 86%, 92% 100%, 0 100%, 0 14%);
+  clip-path: polygon(10% 0, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 22%);
+
 }
 
 .hero-info__title {
@@ -347,7 +348,7 @@ ul {
   background-image: url(../img/action.svg);
   background-position: left center;
   background-repeat: no-repeat;
-  padding: 58px 0 10px 163px;
+  padding: 50px 0 10px 163px;
 }
 
 .game__descr {
@@ -395,7 +396,7 @@ ul {
 }
 
 .form__label {
-  padding: 39px;
+  padding: 22px;
   margin-bottom: 33px;
   width: 100%;
   position: relative;
@@ -441,7 +442,7 @@ ul {
 
 .form__btn {
   padding: 19px 50px;
-  margin-bottom: 13px;
+  margin-bottom: 5px;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
@@ -502,8 +503,8 @@ ul {
 
 
 .hp{
-  padding-top: 75px;
-  padding-bottom: 65px;
+  padding-top: 63px;
+  padding-bottom: 60px;
   background-color: var(--yellow-color);
 }
 
@@ -528,7 +529,7 @@ ul {
 }
 
 .hp__descr {
-  margin-bottom: 20px;
+  margin-bottom: 13px;
   color: var(--black-color);
 }
 
@@ -540,11 +541,11 @@ ul {
 }
 
 .hp__list {
-  margin-bottom: 45px;
+  margin-bottom: 39px;
 }
 
 .hp__item:not(:last-child) {
-  margin-bottom: 26px;
+  margin-bottom: 14px;
 }
 
 .hp__logos {
@@ -563,7 +564,7 @@ ul {
 }
 
 .hp__img {
-  margin-bottom: 43px;
+  margin-bottom: 25px;
 }
 
 
@@ -575,7 +576,7 @@ ul {
 
 .buy {
   position: relative;
-  padding: 70px 0;
+  padding-top: 70px;
   background-color: var(--black-color);
 }
 
@@ -585,6 +586,8 @@ ul {
   top: 0;
   height: 100%;
   width: 50%;
+  max-width: 944px;
+  object-fit: cover;
 }
 
 .buy__container {
@@ -594,7 +597,8 @@ ul {
 
 .buy__content {
   width: 50%;
-  padding-left: 32px;
+  padding-left: 17px;
+  padding-bottom: 50px;
 }
 
 .buy__title {
@@ -605,6 +609,11 @@ ul {
   font-weight: bold;
   font-size: 24px;
   color: var(--blue-color);
+  margin-bottom: 10px;
+}
+
+.buy__list {
+  margin-bottom: 62px;
 }
 
 .buy__item {
@@ -616,31 +625,145 @@ ul {
 }
 
 .buy__item:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 }
 
-.platforms__link {
-  background-repeat: no-repeat;
-  background-size: contain;
+.platforms-list {
+  max-width: 310px;
+  display: grid;
+  gap: 46px 30px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.platforms__link--pc {
-  background-image: url(../img/PC.svg);
+.platforms-list__item {
+  display: flex;
+  align-items: center;
 }
 
-.platforms__link--xbox {
-  background-image: url(../img/xbox-one-3_logo.svg);
-}
-
-.platforms__link--ps4 {
-  background-image: url(../img/Playstation_logo.svg);
-
-}
-
-.platforms__link--stadia {
-  background-image: url(../img/stadia_logo.svg);
+.platforms-subtitle {
+  margin-bottom: 25px;
 }
 
 
 
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 11px;
+  padding-bottom: 4px;
+}
 
+.footer__link {
+  color: var(--black-color);
+}
+
+.footer__link:not(:last-child) {
+  margin-right: 28px;
+}
+
+.footer__bottom {
+  background-color: var(--black-color);
+  text-align: center;
+}
+
+.copyright {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--white-color);
+}
+
+@media (max-width: 1024px) {
+  .about__title {
+    max-width: 74%;
+  }
+
+  .about__descr {
+    max-width: 80%;
+  }
+
+  .about__images {
+    flex-direction: column;
+  }
+
+  .about__left {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .about__image--mini:not(:last-child) {
+    margin-right: 32px;
+    margin-bottom: 0;
+  }
+
+  .about__left {
+    margin-right: 0;
+  }
+
+  .about__image img {
+    height: 94%;
+  }
+
+  .about__image--big {
+    width: 100%;
+  }
+
+  .game__title {
+    width: calc(50% - 16px);
+    background-position: left top;
+    padding: 151px 0 0 0;
+  }
+
+  .game__descr {
+    width: calc(50% - 16px);
+  }
+
+  .game__form {
+    padding-top: 26px;
+    width: calc(50% - 16px);
+  }
+
+  .game__img {
+    position: absolute;
+    right: 36px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 4px;
+    width: calc(46.5% - 16px);
+  }
+
+  .hp {
+    padding-bottom: 70px;
+  }
+
+  .hp__left {
+    margin-top: 43px;
+  }
+
+  .hp__logos {
+    flex-direction: column;
+  }
+
+  .logos-separator {
+    margin: 20px 0;
+  }
+
+  .buy__image {
+    width: 32.5%;
+    max-width: 332px;
+  }
+
+  .buy__content {
+    width: calc(100% - 32.5%);
+    padding-left: 19px;
+    padding-bottom: 57px;
+  }
+
+  .platforms-list {
+    gap: 39px 30px;
+  }
+}
