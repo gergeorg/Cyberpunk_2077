@@ -115,16 +115,7 @@ ul {
 }
 
 
-
-
-
-
-
-
-
-
-
-
+/* header */
 
 
 .header {
@@ -185,22 +176,12 @@ ul {
 }
 
 
-
-
-
-
-
-
-
-
-
+/* hero */
 
 
 .hero {
   position: relative;
-  /* background-image: url(../img/hero-slide_1.jpg); */
   height: 1000px;
-  /* height: 100vh; */
 }
 
 .hero__slider {
@@ -219,7 +200,6 @@ ul {
   background-size: cover;
 }
 
-
 .hero__container {
   height: 100%;
   display: flex;
@@ -237,7 +217,6 @@ ul {
 .corner-block {
   overflow: hidden;
   clip-path: polygon(10% 0, 100% 0, 100% 71%, 87% 100%, 0 100%, 0 22%);
-
 }
 
 .hero-info__title {
@@ -249,19 +228,12 @@ ul {
 }
 
 .hero-info__btn {
-  /* padding: 19px 50px;
-  font-weight: 700; */
   font-size: 24px;
   line-height: 40px;
-  /* color: var(--yellow-color); */
-  /* background-color: var(--black-color); */
 }
 
 
-
-
-
-
+/* about */
 
 
 .about {
@@ -307,10 +279,7 @@ ul {
 }
 
 
-
-
-
-
+/* game */
 
 
 .game {
@@ -340,7 +309,6 @@ ul {
   height: 70px;
   background-image: url(../img/game_bg-bottom.png);
   background-repeat: repeat-x;
-  /* transform: rotate(180deg); */
 }
 
 .game__title {
@@ -452,7 +420,6 @@ ul {
 
 .checkbox {
   position: relative;
-
 }
 
 .checkbox__input {
@@ -495,11 +462,7 @@ ul {
 }
 
 
-
-
-
-
-
+/* hp */
 
 
 .hp{
@@ -536,7 +499,7 @@ ul {
 .hp__item {
   padding-left: 42px;
   background-repeat: no-repeat;
-  background-size: contain;
+  /* background-size: contain; */
   background-position: left center;
 }
 
@@ -568,10 +531,7 @@ ul {
 }
 
 
-
-
-
-
+/* buy */
 
 
 .buy {
@@ -619,7 +579,7 @@ ul {
 .buy__item {
   padding-left: 42px;
   background-repeat: no-repeat;
-  background-size: contain;
+  /* background-size: contain; */
   background-position: left center;
   color: var(--white-color);
 }
@@ -644,6 +604,8 @@ ul {
   margin-bottom: 25px;
 }
 
+
+/* footer */
 
 
 .footer__container {
@@ -673,6 +635,10 @@ ul {
   line-height: 14px;
   color: var(--white-color);
 }
+
+
+/* media */
+
 
 @media (max-width: 1024px) {
   .about__title {
@@ -767,3 +733,189 @@ ul {
     gap: 39px 30px;
   }
 }
+
+@media (max-width: 768px) {
+
+  .header__container {
+    flex-direction: column;
+  }
+
+  .header__logo {
+    margin-bottom: 10px;
+  }
+
+  .game__title {
+    width: 100%;
+  }
+
+  .game__descr {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .game__img {
+    position: static;
+    margin: 0;
+    transform: none;
+    width: 100%;
+  }
+
+  .game__content {
+    flex-direction: column-reverse;
+  }
+
+  .game__form {
+    width: 100%;
+    align-items: center;
+  }
+
+  .hp__container {
+    flex-direction: column;
+  }
+
+  .hp__left, .hp__right {
+    width: 100%;
+    margin: 0;
+  }
+
+  .buy__image {
+    position: static;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 30px;
+  }
+
+  .buy {
+    padding-top: 0;
+  }
+
+  .buy__content {
+    width: 100%;
+  }
+
+  .footer__container  {
+    flex-direction: column;
+  }
+
+  .footer-left, .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__link:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .footer__top {
+    padding: 25px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .site-title {
+    font-size: 30px;
+    line-height: 31px;
+  }
+
+  .header__logo {
+    margin: 20px auto 0;
+    width: 70%;
+  }
+
+  .about__title {
+    max-width: 100%;
+  }
+
+  .social__link {
+    width: 25px;
+    height: 25px;
+  }
+
+  .social__item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .hero {
+    height: 770px;
+  }
+
+  .hero__info {
+    padding: 32px;
+    max-width: none;
+    width: 100%;
+  }
+
+  .hero-info__btn {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .black-btn {
+    padding: 11px 54px;
+  }
+
+  .hero-info__title {
+    font-size: 30px;
+    line-height: 31px;
+  }
+
+  .hero__container {
+    padding: 0;
+  }
+
+  .about {
+    padding-top: 64px;
+  }
+
+  .about__title {
+    margin-bottom: 23px;
+  }
+
+  .about__descr {
+    max-width: 100%;
+    margin-bottom: 57px;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .about__left {
+    flex-direction: column;
+  }
+
+  .about__image--mini:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 23px;
+  }
+
+  .about__image img {
+    height: 196px;
+  }
+
+  .about__image--big img {
+    height: 424px;
+  }
+
+  .game__title {
+    background-size: 20%;
+    padding: 77px 0 0 0;
+  }
+
+  .form-label__file {
+    width: 100%;
+  }
+
+  .buy__item {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+
+
+
+
